@@ -1,17 +1,14 @@
-
+import '../App.css'
 const Sidebar = () => {
     return (
-    <div>
-        <aside>
-            <a href="http://localhost:5174/">
-            <p> Home</p>
-            </a>
-            <a href="https://github.com/najjaved/e-Commerce-admin">
-            <p id= "about"> About</p>
-            </a>
-            <p> This is our first App in React</p>
-        </aside>
-    </div>
+    <div className = "sidebar">
+		<ul>
+		<li> <a href="http://localhost:5174/"> Home </a> </li>
+		<li> <a href="#"> About </a> </li>
+		<li> <a href="/"> Contact </a> </li>
+		</ul>
+     </div>
+
     )
 
 }

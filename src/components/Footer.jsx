@@ -1,7 +1,7 @@
 
 const Footer = () => {
     return (
-    <footer>
+    <footer className="footer">
         <a href="https://github.com/najjaved/e-Commerce-admin">
          Repository e-Commerce-admin
         </a>
