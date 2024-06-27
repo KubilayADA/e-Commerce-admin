@@ -31,14 +31,16 @@
   margin: 5px 0;
   height: 100%;
   max-width: 200px;
-  background-color:rgba(127, 255, 212, 0.144);
+  background-color:#9FA6B2;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
-  background-color: black;
+  background-color: rgba(0, 0, 255, 0.091);
+  color: black;
   width: 100%;
   text-align: center;
+  
 }
 
