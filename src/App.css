@@ -1,18 +1,33 @@
-
+/* css reset */
+* {
+  margin: 0;
+} 
 .App {
-  margin: 10px;
   font-family: sans-serif;
+  /*text-align: center;*/
 }
 
-.nav-bar {
-  display: flex;
+.navbar {
   width: 100%;
-  align-items: center;
-  justify-content: center;
   background-color: rgba(0, 0, 255, 0.091);
   color: #120404d7;
   padding: 10px;
   
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.091);
+  color: #120404d7;
+  padding: 10px;
+  
+}
+
+.navbar-items > span {
+  color: blue;
+  font-weight:bold;
 }
 
 .logo {
@@ -34,6 +49,17 @@
   background-color:#9FA6B2;
 }
 
+.sidebar li,
+.sidebar a {
+  justify-content: left;
+  list-style: none;
+  text-decoration: none; 
+  display: inline-block;
+  margin: 0px 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -44,3 +70,34 @@
   
 }
 
+.footer:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.not-found {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found > img {
+  width: 100vw;
+  height: 100vh;
+}
+.product-div {
+  display: flex;
+  justify-content: center;
+}
+
+.details-div{
+  margin: 45px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* example selector:
+  p.intro	    Selects only <p> elements with class="intro" 
+  
+  width: fit-content;
+  */

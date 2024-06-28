@@ -1,13 +1,15 @@
-import '../App.css'
+import '../App.css';
+import { Link } from 'react-router-dom';
+
 const Sidebar = () => {
     return (
     <div className = "sidebar">
 		<ul>
-		<li> <a href="http://localhost:5174/"> Home </a> </li>
-		<li> <a href="#"> About </a> </li>
-		<li> <a href="/"> Contact </a> </li>
+		<li> <Link to ="/"> Home </Link> </li>
+		<li> <Link to ="/about"> About </Link> </li>
+		<li> <Link to ="/contact"> Contact </Link> </li>
 		</ul>
-     </div>
+    </div>
 
     )
 
