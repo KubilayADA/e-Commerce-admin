@@ -1,7 +1,7 @@
 import productsData from "../assets/products.json";
 import React, { useState } from 'react';
 
-import ProductInfoItem from "../components/ProductInfoItem";
+import Product from "../components/Product";
 
 const DashboardPage = () => {
 
@@ -10,10 +10,10 @@ const DashboardPage = () => {
 
     return (
         <div>
-          <h2>Dashboard</h2>
           {products.map(currentProduct => {
-            return <ProductInfoItem key = {currentProduct.id} 
-            image ={currentProduct.images[0]}
+            return <Product key = {currentProduct.id}
+            id = {currentProduct.id}
+            image ={currentProduct.images[0]} /* toDO: add list of images  */
             brand ={currentProduct.brand}
             title ={currentProduct.title}
             price ={currentProduct.price}

@@ -4,13 +4,16 @@
 } 
 .App {
   font-family: sans-serif;
-  /*text-align: center;*/
+  /*
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;*/
 }
 
 .navbar {
   width: 100%;
-  background-color: rgba(0, 0, 255, 0.091);
-  color: #120404d7;
+  background-color:#0a035a;
   padding: 10px;
   
 }
@@ -19,16 +22,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 255, 0.091);
-  color: #120404d7;
+  color: whitesmoke;
+  font-weight:bold;
   padding: 10px;
   
 }
 
-.navbar-items > span {
-  color: blue;
-  font-weight:bold;
-}
+
 
 .logo {
   height: 6em;
@@ -40,31 +40,45 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-
-.sidebar {
-  display: flex;
-  margin: 5px 0;
-  height: 100%;
-  max-width: 200px;
-  background-color:#9FA6B2;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.sidebar li,
-.sidebar a {
-  justify-content: left;
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.sidebar {
+  margin: 0;
+  padding: 15px;
+  height: 100vh;
+  max-width: 200px;
+  background-color:#74787e;
+  color: #0a035a;
+}
+
+.sidebar li {
   list-style: none;
   text-decoration: none; 
-  display: inline-block;
-  margin: 0px 20px;
+  margin: 0;
+  padding: 2px 5px;
   font-size: 1.2rem;
   color: white;
+  font-weight: bold;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
-  background-color: rgba(0, 0, 255, 0.091);
-  color: black;
+  background-color:#0a035a;
+  color: whitesmoke;
   width: 100%;
   text-align: center;
   
@@ -75,6 +89,9 @@
   text-decoration: underline;
 }
 
+.page-content{
+  display:flex;
+}
 .not-found {
   display:flex;
   flex-direction: column;
@@ -86,14 +103,23 @@
   height: 100vh;
 }
 .product-div {
+  margin: 20px;
   display: flex;
   justify-content: center;
 }
 
+.images-div{
+width:50%;
+}
+.images-div > img {
+width:100%;
+}
+
 .details-div{
-  margin: 45px 10px;
+  margin: 0px 20px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 /* example selector:
