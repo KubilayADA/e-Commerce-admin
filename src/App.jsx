@@ -7,6 +7,7 @@ import AboutPage from './pages/AboutPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import DashboardPage from './pages/DashboardPage';
+import UserLoginPage from './pages/UserLoginPage';
 
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
         <Sidebar/>
 
         <Routes>
-          <Route path= '/' element = {<DashboardPage />} />
           <Route path= '/about' element = {<AboutPage/>} />
-          <Route path= '/details' element = {<ProductDetailsPage/>} />
-          <Route path= '*' element = {<NotFoundPage/>} />
+          <Route path= '/' element = {<DashboardPage />} />
+          <Route path= '/products/:productId' element = {<ProductDetailsPage/>} />
+          <Route path= '/userLogin' element = {<UserLoginPage/>} />
+          <Route path= '*' element = {<NotFoundPage/>} /> {/* fallback page  */}
         </Routes> 
         
       </div>

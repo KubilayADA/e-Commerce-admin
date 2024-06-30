@@ -1,5 +1,5 @@
-import dummyLogo from "../assets/dummyLogo.png"
-import profileIcon from "../assets/profile-icon.png"
+import dummyLogo from "../assets/images/dummyLogo.png"
+import profileIcon from "../assets/images/profile-icon.png"
 import { Link } from "react-router-dom"
 
 

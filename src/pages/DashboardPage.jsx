@@ -1,34 +1,35 @@
-import productsData from "../assets/products.json";
-import React, { useState } from 'react';
+import productsData from "../assets/data/products.json";
+import React, { Fragment, useState } from 'react';
+import { Link } from "react-router-dom";
 
 import Product from "../components/Product";
 
 const DashboardPage = () => {
 
-    const [products, setProducs] = useState(productsData);
-    const handleDelete = (id) => setProducs(products.filter(currentProduct => (currentProduct.id !== id)));
+  const [products, setProducts] = useState(productsData);
+  const handleDelete = (id) => setProducts(products.filter(currentProduct => (currentProduct.id !== id)));
 
-    return (
-        <div>
-          {products.map(currentProduct => {
-            return <Product key = {currentProduct.id}
-            id = {currentProduct.id}
-            image ={currentProduct.images[0]} /* toDO: add list of images  */
-            brand ={currentProduct.brand}
-            title ={currentProduct.title}
-            price ={currentProduct.price}
-            discountPercentage ={currentProduct.discountPercentage}
-            category ={currentProduct.category}
-            deletProduct ={handleDelete}       
-            />;
+
+  return (
+        <div className="prodcuts-div">
+          {productsData &&
+                      productsData.map((currentProduct) => {
+                        return (
+                            <Link key={currentProduct.id} to = {`/products/${currentProduct.id}`}>
+                              <Product product = {currentProduct} 
+                               deletProduct ={handleDelete}
+                              />                             
+                            </Link>
+                      
+                        );  
+    
           })}
+
+
+          
         </div>
       );
     
 }
 
 export default DashboardPage;
-
-
-
-
