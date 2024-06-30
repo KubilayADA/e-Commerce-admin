@@ -130,7 +130,7 @@ width:50%;
 width:100%;
 }
 
-.details-div {
+.details-div, form {
   margin: 0px 20px;
   display: flex;
   flex-direction: column;

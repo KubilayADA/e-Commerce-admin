@@ -1,10 +1,9 @@
 import { Fragment } from "react";
-import productsData from "../assets/data/products.json";
 import { useParams, Link, Navigate } from "react-router-dom";
 
-const ProductDetailsPage = () => {
+const ProductDetailsPage = ({productsList}) => {
     const {productId} = useParams();
-    const product = productsData.find(currentProduct => currentProduct.id === productId);
+    const product = productsList.find(currentProduct => currentProduct.id === productId);
     console.log(productId,product);
 
     if(!product) {

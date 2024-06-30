@@ -7,10 +7,18 @@ import AboutPage from './pages/AboutPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import DashboardPage from './pages/DashboardPage';
+import NewProduct from './pages/NewProduct';
 import UserLoginPage from './pages/UserLoginPage';
+import productsData from "./assets/data/products.json";
+import React, { useState } from 'react';
 
 
 function App() {
+
+  const [products, setProducts] = useState(productsData);
+  const addProduct = (newProduct) => {
+    setProducts([newProduct, ...products]) //latest entries on top
+  }
   
   return (
     <div className='App'>
@@ -20,8 +28,9 @@ function App() {
 
         <Routes>
           <Route path= '/about' element = {<AboutPage/>} />
-          <Route path= '/' element = {<DashboardPage />} />
-          <Route path= '/products/:productId' element = {<ProductDetailsPage/>} />
+          <Route path= '/' element = {<DashboardPage productsList = {products} setProductsList ={setProducts} />} />
+          <Route path= '/products/newProduct' element = {<NewProduct productsList = {products} addNewProduct={addProduct} />} />
+          <Route path= '/products/:productId' element = {<ProductDetailsPage productsList = {products}/>} />
           <Route path= '/userLogin' element = {<UserLoginPage/>} />
           <Route path= '*' element = {<NotFoundPage/>} /> {/* fallback page  */}
         </Routes> 
