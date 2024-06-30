@@ -13,8 +13,8 @@
 
 .navbar {
   width: 100%;
-  background-color:#0a035a;
-  padding: 10px;
+  background-color:#0076A8;
+  height: 10em;
   
 }
 
@@ -24,6 +24,7 @@
   align-items: center;
   color: whitesmoke;
   font-weight:bold;
+  font-size: 1.5rem;
   padding: 10px;
   
 }
@@ -31,8 +32,10 @@
 
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 4.5em;
+  padding: 1em;
+  padding-left: 0.5em;
+  border-radius: 10%;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -40,6 +43,7 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+/* Rotating logo
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -54,20 +58,20 @@
     animation: logo-spin infinite 20s linear;
   }
 }
+*/
 
 .sidebar {
   margin: 0;
   padding: 15px;
   height: 100vh;
-  width: 150px;
+  min-width: 8em;;
   max-width: 250px;
-  background-color:#74787e;
-  color: #0a035a;
+  background-color:#6D7283;
 }
 
 .sidebar ul {
   margin: 0; 
-  padding: 0;
+  padding-left: 0.5em;
   text-align: left;
 }
 
@@ -76,15 +80,18 @@
   list-style: none;
   text-decoration: none; 
   padding: 2px 0;
-  font-size: 1.2rem;
-  color: white;
+  font-size: 1rem;
   font-weight: bold;
+}
+
+.sidebar li a, .footer a {
+   color: white;
 }
 
 .footer {
   position: fixed;
   bottom: 0;
-  background-color:#0a035a;
+  background-color:#0076A8;
   color: whitesmoke;
   width: 100%;
   text-align: center;
@@ -100,14 +107,15 @@
   display:flex;
 }
 .not-found {
+  margin:20px 0;
   display:flex;
   flex-direction: column;
   align-items: center;
 }
 
 .not-found > img {
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 80vh;
 }
 .product-div {
   margin: 20px;
@@ -127,6 +135,7 @@ width:100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  color: #0076A8;
 }
 
 /* example selector:

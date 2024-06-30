@@ -1,5 +1,5 @@
 import productsData from "../assets/data/products.json";
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import Product from "../components/Product";
