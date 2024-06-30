@@ -59,16 +59,23 @@
   margin: 0;
   padding: 15px;
   height: 100vh;
-  max-width: 200px;
+  width: 150px;
+  max-width: 250px;
   background-color:#74787e;
   color: #0a035a;
 }
 
+.sidebar ul {
+  margin: 0; 
+  padding: 0;
+  text-align: left;
+}
+
 .sidebar li {
+  margin-left: 0;
   list-style: none;
   text-decoration: none; 
-  margin: 0;
-  padding: 2px 5px;
+  padding: 2px 0;
   font-size: 1.2rem;
   color: white;
   font-weight: bold;

@@ -11,7 +11,9 @@ const DashboardPage = () => {
 
 
   return (
-        <div className="prodcuts-div">
+        <div className="dashboard" style={{textAlign: 'center', padding: '10px'}}>
+
+          <h2>Dashboard</h2>
           {productsData &&
                       productsData.map((currentProduct) => {
                         return (
