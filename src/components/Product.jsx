@@ -1,6 +1,12 @@
 
 const Product = ({product, deletProduct}) => {
 
+      const handleDeleteClick = (event) => {
+        //event.stopPropagation();
+        event.preventDefault();
+        deletProduct(product.id);
+      };
+
       return ( 
         <div className = "product-div">
           <div className="images-div">
@@ -14,7 +20,7 @@ const Product = ({product, deletProduct}) => {
             <p> Discount: {product.discountPercentage}</p>
             {product.price <600 && <p> Great Deal </p>}
             {(product.brand === "Apple" && product.price>800) && <p> Get a free Apple watch!</p>}
-            <button type = "button" onClick={()=> {deletProduct(product.id)}} > Delete </button> {/* <button onClick={handleDeleteClick}>Delete</button>*/}
+            <button type = "button" onClick={handleDeleteClick} > Delete </button>
           </div>
         </div>
          );

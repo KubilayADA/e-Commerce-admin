@@ -17,7 +17,7 @@ const Navbar = () => {
 
         <span>Our Store name </span>
 
-        <Link to = '/userLogin' >
+        <Link to = '/userLogin' > {/* toDO */}
           <img
             className="user"
             src={profileIcon || "swap-user-image"}

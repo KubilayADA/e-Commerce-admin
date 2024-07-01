@@ -4,7 +4,7 @@ const AboutPage = () => {
     return ( 
     <div className="about-page">
 
-        <h3>About Page</h3>
+        <h3>About Page</h3> /*toDo: add content to About page and styling */
         <p> A page showing the project description and information about the team members (students) working on the project, 
                 including links to your GitHub and LinkedIn profiles.</p>
         <div>

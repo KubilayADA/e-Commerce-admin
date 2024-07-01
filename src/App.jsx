@@ -9,8 +9,10 @@ import NotFoundPage from './pages/NotFoundPage';
 import DashboardPage from './pages/DashboardPage';
 import NewProduct from './pages/NewProduct';
 import UserLoginPage from './pages/UserLoginPage';
+import ContactPage from './pages/ContactPage';
 import productsData from "./assets/data/products.json";
 import React, { useState } from 'react';
+
 
 
 function App() {
@@ -32,6 +34,7 @@ function App() {
           <Route path= '/products/newProduct' element = {<NewProduct productsList = {products} addNewProduct={addProduct} />} />
           <Route path= '/products/:productId' element = {<ProductDetailsPage productsList = {products}/>} />
           <Route path= '/userLogin' element = {<UserLoginPage/>} />
+          <Route path= '/contact' element = {<ContactPage/>} />
           <Route path= '*' element = {<NotFoundPage/>} /> {/* fallback page  */}
         </Routes> 
         
