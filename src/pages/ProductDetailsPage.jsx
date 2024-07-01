@@ -5,7 +5,6 @@ const ProductDetailsPage = ({productsList}) => {
     const product = productsList.find(currentProduct => currentProduct.id === parseInt(productId));
 
     if(!product) {
-      <h2> ProductId: {productId} , ProductId Type: {typeof(productId)} </h2>
       return <Navigate to = '/' />
     }
 
