@@ -1,5 +1,7 @@
 import profileIcon from "../assets/images/profile-icon.png"
 import { Link } from "react-router-dom";
+import '../AboutPage.css';
+
 const AboutPage = () => {
     return ( 
     <div className="about-page">
